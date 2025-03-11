@@ -11,7 +11,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`absolute h-screen bg-gray-900 text-white flex flex-col justify-between p-4 transition-all duration-300 ease-in-out ${expanded ? 'w-64' : 'w-18'}`}
+      className={`h-screen bg-gray-900 text-white flex flex-col justify-between p-4 transition-all duration-300 ease-in-out ${expanded ? 'w-64' : 'w-18'}`}
       onMouseEnter={() => setExpanded(true)}
       onMouseLeave={() => setExpanded(false)}
     >
