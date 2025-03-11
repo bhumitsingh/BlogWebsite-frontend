@@ -4,8 +4,10 @@ import Footer from "@/app/components/footer";
 export default function Home() {
     return (
         <>
-            <Sidebar />
-            <Footer />
+            <div className="flex flex-col">        
+                <Sidebar />
+                <Footer />
+            </div>
         </>
     )
 }
