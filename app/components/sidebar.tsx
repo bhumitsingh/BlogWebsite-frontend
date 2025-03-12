@@ -5,6 +5,7 @@ import { Home, LayoutDashboard, ClipboardList, BarChart, Bell, HelpCircle, Setti
 import Image from 'next/image';
 import profilePic from '@/public/profile-pic.svg';
 import icon from '@/public/icon.svg';
+import SidebarProfile from '@/app/components/sidebar_profile';
 
 const Sidebar = () => {
   const [expanded, setExpanded] = useState(false);
@@ -46,15 +47,7 @@ const Sidebar = () => {
         <SidebarItem icon={<Bell size={20} />} text="Notifications" expanded={expanded} badge={12} />
         <SidebarItem icon={<HelpCircle size={20} />} text="Support" expanded={expanded} />
         <SidebarItem icon={<Settings size={20} />} text="Settings" expanded={expanded} />
-        <div className="flex items-center gap-2 mt-4 p-2 bg-gray-800 rounded-lg cursor-pointer">
-          <Image src={profilePic} alt="Profile" width={32} height={32} className="rounded-full" />
-          {expanded && (
-            <div>
-              <p className="text-sm font-semibold">Brooklyn Simmons</p>
-              <p className="text-xs text-gray-400">brooklyn@simmons.com</p>
-            </div>
-          )}
-        </div>
+        <SidebarProfile expanded={expanded}/>
       </div>
     </div>
   );

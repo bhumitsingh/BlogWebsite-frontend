@@ -43,7 +43,16 @@ const MainSection = () => {
   );
 };
 
-const ArticleCard = ({ title, author, category, date, views, comments }) => {
+interface ArticleCardProps {
+  title: string;
+  author: string;
+  category: string;
+  date: string;
+  views: string;
+  comments: string;
+}
+
+const ArticleCard = ({ title, author, category, date, views, comments }: ArticleCardProps) => {
   return (
     <div className="flex flex-col border-b pb-4">
       <p className="text-sm text-gray-500">{category} by {author}</p>
