@@ -1,19 +1,12 @@
 'use client';
 
-const MainSection = () => {
+import ArticleCard from "@/app/components/article_card";
+
+export default function MainSection() {
   return (
     <div className="flex flex-col w-full max-w-4xl mx-auto p-4">
-      {/* Navigation Tabs */}
-      <div className="flex space-x-4 border-b pb-2 text-gray-600">
-        <button className="font-semibold text-black border-b-2 border-black pb-2">For you</button>
-        <button className="hover:text-black">Following</button>
-        <button className="hover:text-black">Featured</button>
-        <button className="hover:text-black">Software Development</button>
-        <button className="hover:text-black">Remote Work</button>
-      </div>
-      
       {/* Articles List */}
-      <div className="mt-4 space-y-6">
+      <div className="flex flex-col mt-4 space-y-6">
         <ArticleCard 
           title="The 5-Second Conversation Hack That Makes People Instantly Like You" 
           author="Alessia Fransisca"
@@ -43,27 +36,5 @@ const MainSection = () => {
   );
 };
 
-interface ArticleCardProps {
-  title: string;
-  author: string;
-  category: string;
-  date: string;
-  views: string;
-  comments: string;
-}
 
-const ArticleCard = ({ title, author, category, date, views, comments }: ArticleCardProps) => {
-  return (
-    <div className="flex flex-col border-b pb-4">
-      <p className="text-sm text-gray-500">{category} by {author}</p>
-      <h2 className="text-lg font-bold text-black">{title}</h2>
-      <div className="flex space-x-4 text-sm text-gray-500 mt-1">
-        <span>{date}</span>
-        <span>{views} views</span>
-        <span>{comments} comments</span>
-      </div>
-    </div>
-  );
-};
 
-export default MainSection;

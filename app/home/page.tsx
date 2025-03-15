@@ -4,7 +4,7 @@ import MainSection from "@/app/components/main";
 
 export default function Home() {
     return (
-        <div className="flex min-h-screen">
+        <div className="bg-white flex min-h-screen">
             {/* Sidebar */}
             <Sidebar />
 
