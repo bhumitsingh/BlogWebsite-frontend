@@ -1,6 +1,6 @@
 'use client';
 
-import ArticleCard from "@/app/components/article_card";
+import ArticleCard from "@/app/components/ui/article_card";
 
 export default function MainSection() {
   return (

@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import profilePic from '@/public/profile-pic.svg';
+import profile from '@/public/profile.svg';
+
 
 export default function SidebarProfile({ expanded }: { expanded: boolean }) {
     const router = useRouter();
@@ -52,9 +53,9 @@ export default function SidebarProfile({ expanded }: { expanded: boolean }) {
     return (
         <button
         onClick={handleAuth}
-        className="flex items-center gap-2 mt-4 p-2 bg-gray-800 rounded-lg cursor-pointer hover:bg-gray-700 w-full"
+        className="flex items-center gap-2 mt-4 p-2 bg-gray-800 rounded-lg cursor-pointer hover:bg-gray-700"
         >
-        <Image src={profilePic} alt="Profile" width={32} height={32} className="rounded-full" />
+        <Image src={profile} alt="Profile" width={40} height={40} className="rounded-full" />
         {expanded && (
             <div className='text-left'>
             {user ? (
